@@ -1,7 +1,11 @@
 import React from "react";
 import Styles from "./App.module.scss";
+import desktopImage from "./assets/image-header-desktop.jpg";
+import mobileImage from "./assets/image-header-mobile.jpg";
 
 function App() {
+  const imageUrl = window.innerWidth > 768 ? desktopImage : mobileImage;
+
   return (
     <div className={Styles.container}>
       <div className={Styles.leftContainer}>
@@ -26,7 +30,9 @@ function App() {
           </div>
         </footer>
       </div>
-      <div className={Styles.rightContainer}>&nbsp;</div>
+      <div className={Styles.rightContainer}>
+        <img height='100%' width='100%' src={imageUrl} alt="m" />
+      </div>
     </div>
   );
 }
