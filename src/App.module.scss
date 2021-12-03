@@ -1,0 +1,78 @@
+@import "./variables.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $blueDesat;
+  margin: 0;
+}
+
+.leftContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  color: $white;
+  padding: 50px;
+  .header {
+    span {
+      color: $violet;
+    }
+  }
+  .content {
+    color: $mainParagraph;
+  }
+  .footer {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    div {
+      display: flex;
+      flex-direction: column;
+      font-size: xx-large;
+      color: $statHeadings;
+
+      span {
+        padding-top: 10px;
+        font-size: large;
+        color: $mainParagraph;
+      }
+    }
+  }
+}
+
+.rightContainer {
+  flex: 1;
+  background-image: url("./assets/image-header-desktop.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  padding-top: 30%;
+}
+
+@media only screen and (max-device-width: 375px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .leftContainer {
+    padding: 0px;
+    align-items: center;
+    margin: 0px;
+  }
+  .rightContainer {
+    background-image: url("./assets/image-header-mobile.jpg");
+    padding-top: 74%;
+  }
+
+  .footer {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    div {
+      align-items: center;
+    }
+  }
+}
