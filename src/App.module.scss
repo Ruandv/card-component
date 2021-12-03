@@ -7,7 +7,11 @@
   background-color: $blueDesat;
   margin: 0;
 }
-
+img {
+  object-fit: cover;
+  opacity: 0.4;
+  min-height: 350px;
+}
 .leftContainer {
   display: flex;
   flex-direction: column;
@@ -44,6 +48,7 @@
 
 .rightContainer {
   flex: 1;
+  background-color: $violet;
 }
 
 @media only screen and (max-device-width: 768px) {
@@ -57,7 +62,7 @@
     margin: 0px;
     text-align: center;
   }
-  
+
   .footer {
     padding-top: 20px;
     display: flex;
