@@ -1,5 +1,8 @@
 @import "./variables.scss";
-
+body {
+  font-family: "Inter", sans-serif;
+  // font-family: 'Lexend Deca', sans-serif;
+}
 .container {
   display: flex;
   align-items: center;
@@ -19,6 +22,7 @@ img {
   color: $white;
   padding: 50px;
   .header {
+    font-weight: 700;
     span {
       color: $violet;
     }
@@ -39,6 +43,7 @@ img {
       span {
         padding: 5px 0px 20px 0px;
         font-size: large;
+        font-family: "Lexend Deca", sans-serif;
         color: $mainParagraph;
         text-transform: uppercase;
       }
